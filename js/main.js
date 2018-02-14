@@ -19,12 +19,13 @@ function startGame(e) {             //start game function(element)
   console.log(compare())
   //results()    //will print the results of my compare function below to console for testing
 }
-
+//*****FAILED ATTEMPT AT HTML ELEMENT CREATION******
 // var head2 = document.createElement("h2");
 // var node = document.createTextNode(result);
 // head2.appendChild(node);
 // var element = document.getElementById("result");
 // element.appendChild(head2);
+//**************************************************
 
 // outcomes to add to compare() function
           // TIES: uChoice == cChoice ( Rock rock, paper paper, scissors scissors)
@@ -59,14 +60,12 @@ function compare(){
     result = "You Lose."
   }
 }
-document.getElementById("results").innerHTML = printResult;
-// function results(){
-// var newh2 = document.createElement("h2");
-// var node = document.createTextNode(result);
-// newh2.appendChild(node);
-// var element = document.getElementById("result");
-// element.appendChild(newh2);
-// }
+
+//******************FAILED ATTEMPT TO PASS RESULTS TO INNER HTML****************
+//document.getElementById("results").innerHTML = printResult;
+//******************************************************************************
+
+
 
 var choices = document.getElementsByClassName('choice')
 for (var i in choices) {

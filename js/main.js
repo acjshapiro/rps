@@ -30,15 +30,20 @@ function startGame(e) {             //start game function(element)
 
 function compare(){
   if (uChoice == cChoice){
-    return "tie"
-  }else if(uChoice == "rock" && cChoice == "paper" ) {
-
-
-  }else if (......){
-
+    return "Looks like a tie"
+  }else if(uChoice == "rock" && cChoice == "paper") {
+    return "oooooof.  You lose."
+  }else if (uChoice == "rock" && cChoice == "scissors"){
+    return "Eyyyyy! You win!"
+  }else if (uChoice == "paper" && cChoice == "rock" ){
+    return "Eyyyyy! You Win!"
+  }else if (uChoice == "paper" && cChoice == "scissors" ){
+    return "oooooof.  You lose."
+  }else if (uChoice == "scissors" && cChoice == "paper" ){
+    return "Eyyyyy! You Win!"
+  }else if (uChoice == "scissors" && cChoice == "rock"){
+    return "oooooof.  You lose."
   }
-
-
 }
 
 

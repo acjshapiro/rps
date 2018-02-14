@@ -1,5 +1,5 @@
 var uChoice = null      //Sets variables that can be used throughout.
-var cChoice = null      //These are set in the functions below.
+var cChoice = null
 
 
 function computerChoice(){    //function to get random computer choice R/P/S
@@ -14,9 +14,15 @@ function startGame(e) {             //start game function(element)
   uChoice = choice             //assign choice to uChoice ^ from top. reassigns from null
   console.log(choice)          // prints choice to console for testing
   computerChoice()            //runs function computerChoice()
-  console.log(compare())      //will print the results of my compare function below to console for testing
+  console.log(compare())
+  //results()    //will print the results of my compare function below to console for testing
 }
 
+// var head2 = document.createElement("h2");
+// var node = document.createTextNode(result);
+// head2.appendChild(node);
+// var element = document.getElementById("result");
+// element.appendChild(head2);
 
 // outcomes to add to compare() function
           // TIES: uChoice == cChoice ( Rock rock, paper paper, scissors scissors)
@@ -27,26 +33,38 @@ function startGame(e) {             //start game function(element)
           // Scissors Paper : user wins
           // scissors Rock  : user loses
 
-
 function compare(){
   if (uChoice == cChoice){
     return "Looks like a tie"
+    var result = "Tie";
   }else if(uChoice == "rock" && cChoice == "paper") {
     return "oooooof.  You lose."
+    result = "You Lose."
   }else if (uChoice == "rock" && cChoice == "scissors"){
     return "Eyyyyy! You win!"
+    result = "You Win!"
   }else if (uChoice == "paper" && cChoice == "rock" ){
     return "Eyyyyy! You Win!"
+    result = "You Win!"
   }else if (uChoice == "paper" && cChoice == "scissors" ){
     return "oooooof.  You lose."
+    result = "You Lose."
   }else if (uChoice == "scissors" && cChoice == "paper" ){
     return "Eyyyyy! You Win!"
+    result = "You Win!"
   }else if (uChoice == "scissors" && cChoice == "rock"){
     return "oooooof.  You lose."
+    result = "You Lose."
   }
 }
 
-
+// function results(){
+// var newh2 = document.createElement("h2");
+// var node = document.createTextNode(result);
+// newh2.appendChild(node);
+// var element = document.getElementById("result");
+// element.appendChild(newh2);
+// }
 
 var choices = document.getElementsByClassName('choice')
 for (var i in choices) {

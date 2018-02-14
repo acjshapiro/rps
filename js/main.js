@@ -1,5 +1,7 @@
 var uChoice = null      //Sets variables that can be used throughout.
 var cChoice = null
+var printResult = "...."
+//var result = "RESULT HERE"
 
 
 function computerChoice(){    //function to get random computer choice R/P/S
@@ -36,7 +38,7 @@ function startGame(e) {             //start game function(element)
 function compare(){
   if (uChoice == cChoice){
     return "Looks like a tie"
-    var result = "Tie";
+    result = "Tie";
   }else if(uChoice == "rock" && cChoice == "paper") {
     return "oooooof.  You lose."
     result = "You Lose."
@@ -57,7 +59,7 @@ function compare(){
     result = "You Lose."
   }
 }
-
+document.getElementById("results").innerHTML = printResult;
 // function results(){
 // var newh2 = document.createElement("h2");
 // var node = document.createTextNode(result);
